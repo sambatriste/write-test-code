@@ -1,5 +1,5 @@
 # -*- coding: utf-8-unix -*-
-#+OPTIONS: toc:1 date:nil timestamp:nil
+#+OPTIONS: toc:nil date:nil timestamp:nil
 #+OPTIONS: ^:{}
 #+OPTIONS: \n:t
 #+OPTIONS: reveal_single_file:t
