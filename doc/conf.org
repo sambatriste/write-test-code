@@ -1,0 +1,10 @@
+# -*- coding: utf-8-unix -*-
+#+OPTIONS: toc:1 date:nil timestamp:nil
+#+OPTIONS: ^:{}
+#+OPTIONS: \n:t
+#+OPTIONS: reveal_single_file:t
+#+REVEAL_EXTRA_CSS: ~/.emacs.d/lib/reveal.js/mystyle.css
+#+REVEAL_THEME: beige
+#+REVEAL_TRANS: linear
+#+STARTUP: inlineimages
+#+AUTHOR: 川崎 健
