@@ -1,0 +1,61 @@
+# -*- coding: utf-8-unix -*-
+
+#+SETUPFILE: ./conf.org
+#+TITLE: テストの書き方入門編
+
+* テストコードの書きかた超入門編
+** JUnitとは
+
+Java用テスティングフレームワーク
+
+** テストコード例
+
+#+BEGIN_SRC java
+public class MyFirstTest {
+
+    // テストメソッドです。
+    // メソッドに'@Test'アノテーションを付与することで、
+    // テストメソッドとして認識されます
+    @Test
+    public void 指定した要素のインデックスを取得できること() {
+        // 準備: テストの事前条件を整えます
+        // 0:東京, 1:大阪, 2:名古屋
+        List<String> cities = Arrays.asList("東京", "大阪", "名古屋");
+
+        // 実行: テスト対象の処理を呼び出します
+        int indexOfOsaka = cities.indexOf("大阪");
+
+        // 結果比較: 実行結果が期待通りであることを確認します
+        assertEquals(1, indexOfOsaka);
+    }
+}
+#+END_SRC
+
+
+** API補足解説
+
+ほんのちょっとだけ紹介します。
+
+
+| JUnit API                      | 表明                       |
+|--------------------------------+----------------------------|
+| assertEquals(expected, actual) | ２つの引数が等価であること |
+| assertTrue(condition)          | 引数がtrueであること       |
+| assertNotNull(object)          | 引数がnullでないこと       |
+
+- 表明(assertion) :: 「こうなっているはずだ!」「こうなっていないとおかしい!」という宣言くらいの意
+- 表明が成立しなかった場合、例外が発生しテストが失敗します
+
+現在は、上記メソッドではなくassertThatが使用されますが、今回はassertEqualsのみ使用します。
+
+** TDD Bootcampを例に（デモ）
+
+整数の閉区間 (closed range)
+
+http://devtesting.jp/tddbc/?TDDBC%E4%BB%99%E5%8F%B003%2F%E8%AA%B2%E9%A1%8C
+
+
+- 閉区間 :: 両端の点を含む区間。すなわち a ≦ x ≦ b で表されるような数直線上の範囲
+
+#+CAPTION: 3から8の閉区間
+[[./ClosedRange.jpg]]
