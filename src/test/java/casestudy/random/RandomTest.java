@@ -1,7 +1,5 @@
 package casestudy.random;
 
-import java.util.Random;
-
 import org.junit.Test;
 
 /**
