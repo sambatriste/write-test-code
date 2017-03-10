@@ -2,10 +2,7 @@ package casestudy.random;
 
 import org.junit.Test;
 
-/**
- * Created by tie301686 on 2017/03/09.
- */
-public class RandomTest {
+public class PasswordGeneratorTest1 {
 
     @Test
     public void test() {

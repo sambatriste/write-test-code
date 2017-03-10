@@ -1,44 +1,44 @@
 package casestudy.random;
 
-import java.util.Iterator;
 import java.util.Random;
 
 public class PasswordGenerator3 {
-    private final Iterator<Integer> integerIterator;
+
+    private final Random random;
 
     public PasswordGenerator3() {
-        this(new RandomIntegerIterator());
+        this(new Random());
     }
 
-    PasswordGenerator3(Iterator<Integer> integerIterator) {
-        this.integerIterator = integerIterator;
+    PasswordGenerator3(Random random) {
+        this.random = random;
     }
 
+    /**
+     * パスワードを生成する。
+     *
+     * @param numberOfChar
+     *            文字数
+     * @return 生成されたパスワード
+     */
     String generate(int numberOfChar) {
         StringBuilder password = new StringBuilder(numberOfChar);
         for (int i = 0; i < numberOfChar; i++) {
             int rand;
             do {
-                rand = integerIterator.next();
+                rand = generateInt();
             } while (rand <= 0x20 || rand >= 0x7F);
-            char c = (char) rand;
-            password.append(c);
+            password.append((char) rand);
         }
         return password.toString();
     }
 
-    static class RandomIntegerIterator implements Iterator<Integer> {
-
-        private final Random random = new Random();
-
-        @Override
-        public boolean hasNext() {
-            return true;
-        }
-
-        @Override
-        public Integer next() {
-            return random.nextInt();
-        }
+    /**
+     * 数値を生成する。
+     *
+     * @return 数値
+     */
+    protected int generateInt() {
+        return random.nextInt();
     }
 }
