@@ -28,4 +28,14 @@ public class PasswordGeneratorTest3 {
         assertEquals("12345", sut.generate(5));
     }
 
+    /** 別解 */
+    @Test
+    public void test2() {
+        Random seedZero = new Random(0L);
+        PasswordGenerator3 sut = new PasswordGenerator3(seedZero);
+
+        // 乱数ではなくテストで与えた数値が使われるので、結果が予測できる。
+        assertEquals("Gf[@Q", sut.generate(5));
+    }
+
 }

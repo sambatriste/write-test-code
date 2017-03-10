@@ -1,0 +1,127 @@
+# -*- coding: utf-8-unix -*-
+
+#+SETUPFILE: ./conf.org
+#+TITLE: こんなときどうテストするか
+
+
+* テストしにくいこんな場合
+
+- 実行時によって動作が変わるケース
+  - システムクロック
+  - 乱数
+- 引数以外のI/Oが必要なケース
+  - ファイルI/O
+  - データベース
+
+* 基本的な考え方
+
+- 依存関係を断ち切る
+- テストがカバーする範囲を大きくする
+  - 依存関係まとめてテストする
+
+* ケース１: 乱数を使うのでアサーションができません
+
+
+
+* ケース２：このメソッドは戻り値がなくファイルに結果を出力します
+
+
+* データベースのテストをどうするか
+
+ほとんどのシステムはデータベースを使用するが…
+
+** DBアクセスまで含めてテストする
+
+*** 参照系のテスト
+
+- 準備データをDBに登録する
+- テストを実行する
+  - SELECTが発行される
+- 結果を比較する
+
+#+BEGIN_SRC plantuml :file select-test.png :cmdline -charset UTF-8
+hide footbox
+scale 400 * 400
+
+participant テストクラス as test
+participant テスト対象 as sut
+database データベース as db
+
+activate test
+test -> db : 準備データを登録する
+
+test -> sut : 呼び出す
+activate sut
+
+sut -> db : SELECT
+activate db
+
+db --> sut : 結果セット
+deactivate db
+
+sut --> test: 検索結果
+deactivate sut
+
+test --> test: 検索結果の検証する
+
+#+END_SRC
+
+#+RESULTS:
+[[file:select-test.png]]
+
+
+*** 更新系のテスト
+
+- 準備データをDBに登録する
+- テストを実行する
+  - INSERT/UPDATEが発行される
+- DBの値を検証する
+
+#+BEGIN_SRC plantuml :file update-test.png :cmdline -charset UTF-8
+hide footbox
+scale 400 * 400
+
+participant テストクラス as test
+participant テスト対象 as sut
+database データベース as db
+
+activate test
+test -> db : 準備データを登録する
+
+test -> sut : 呼び出す
+activate sut
+
+sut -> db : UPDATE
+activate db
+
+db --> sut
+deactivate db
+
+sut --> test: 検索結果
+deactivate sut
+
+test --> db: 更新結果を検証する
+
+#+END_SRC
+
+#+RESULTS:
+[[file:update-test.png]]
+
+** DBアクセスを含むテストの問題点
+
+- すごーーーーーーーーく *遅い*
+- データの準備・保守がたいへん
+  - 書き方(テストコード, CSV, XML, YAML, Excel...)
+  - メンテナンス(スキーマ変更に弱い)
+- 順番依存のテストになるおそれあり
+  - トランザクション管理
+
+** DBアクセスはモック化する
+
+- DAOパターンを使用している場合はモックに差し替え
+- JMockitなどのモックライブラリを使用する
+
+** DBアクセスモック化の問題点
+
+- DBとSQLというシステムの肝心要がテストコードでカバーできない
+- SELECT結果を写し取る悲しさ
