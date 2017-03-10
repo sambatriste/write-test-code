@@ -3,9 +3,6 @@ package casestudy.random;
 import java.util.Iterator;
 import java.util.Random;
 
-/**
- * Created by tie301686 on 2017/03/09.
- */
 public class PasswordGenerator3 {
     private final Iterator<Integer> integerIterator;
 
@@ -18,16 +15,16 @@ public class PasswordGenerator3 {
     }
 
     String generate(int numberOfChar) {
-        StringBuilder generated = new StringBuilder(numberOfChar);
+        StringBuilder password = new StringBuilder(numberOfChar);
         for (int i = 0; i < numberOfChar; i++) {
             int rand;
             do {
                 rand = integerIterator.next();
             } while (rand <= 0x20 || rand >= 0x7F);
             char c = (char) rand;
-            generated.append(c);
+            password.append(c);
         }
-        return generated.toString();
+        return password.toString();
     }
 
     static class RandomIntegerIterator implements Iterator<Integer> {

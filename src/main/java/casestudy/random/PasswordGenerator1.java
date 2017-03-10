@@ -2,9 +2,6 @@ package casestudy.random;
 
 import java.util.Random;
 
-/**
- * Created by tie301686 on 2017/03/09.
- */
 public class PasswordGenerator1 {
     private final Random random = new Random();
 
