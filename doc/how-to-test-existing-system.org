@@ -1,6 +1,6 @@
 # -*- coding: utf-8-unix -*-
 
-#+SETUPFILE: ./conf.org
+# #+SETUPFILE: ./conf.org
 # #+TITLE: 既存プロジェクトにテストを導入する
 
 * 既存プロジェクトにテストを導入する
@@ -25,11 +25,11 @@
 
 以下、具体的なテクニックを『レガシーコード改善ガイド』より。
 
-https://images-fe.ssl-images-amazon.com/images/I/51f-xfTWkkL._SX260_.jpg]]
+https://images-fe.ssl-images-amazon.com/images/I/51f-xfTWkkL._SX260_.jpg
 
 *** スプラウトメソッド
 
-既存の巨大なメソッドに機能追加しないといけない場合
+既存の巨大メソッドに機能追加する必要がある
 
 - 追加機能を新規メソッドで作成する
 - そのメソッドのテストを書く
@@ -157,7 +157,6 @@ class テストクラス
          // 入力項目のバリデーション（『スプラウトクラス』の呼び出し）
          MemberValidator validator = new MemberValidator();
          validator.validate(member);
-          
          // DBに登録
          db.insert(member);
      }
@@ -165,7 +164,6 @@ class テストクラス
 
 #+BEGIN_SRC java
 class MemberValidator {
-
      void validate(Member member) {
          if (member.getName().isEmpty()) {
               throw new IllegalArgumentException("名前が入力されていません");
@@ -180,7 +178,7 @@ class MemberValidator {
 
 *** スプラウトメソッドとの使い分け
 
-以下のようなケースでは、スプラウトクラスを使います。
+以下のケースでは、スプラウトクラスを使用
 
 - 既存クラスが大きすぎてメソッド追加したくない
 - クラスのテストが書きにくい

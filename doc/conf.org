@@ -7,4 +7,4 @@
 #+REVEAL_THEME: beige
 #+REVEAL_TRANS: linear
 #+STARTUP: inlineimages
-#+AUTHOR: 川崎 健
+#+AUTHOR: T.Kawasaki

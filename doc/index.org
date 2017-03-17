@@ -1,7 +1,7 @@
 # -*- mode: org; coding: utf-8-unix -*-
 
 #+SETUPFILE: ./conf.org
-#+TITLE: テスト書こう
+#+TITLE: Don't just Do Test, Write Test.
 
 #+OPTIONS: toc:0
 #+OPTIONS: reveal_single_file:t
