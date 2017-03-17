@@ -1,12 +1,14 @@
 # -*- coding: utf-8-unix -*-
 
-#+SETUPFILE: ./conf.org
+# #+SETUPFILE: ./conf.org
 #+TITLE: テストの書き方入門編
 
 * テストコードの書きかた超入門編
 ** JUnitとは
 
 Java用テスティングフレームワーク
+
+http://junit.org/
 
 ** テストコード例
 
@@ -32,28 +34,26 @@ public class MyFirstTest {
 #+END_SRC
 
 
-** API補足解説
+** API補足解説（抜粋）
 
-ほんのちょっとだけ紹介します。
-
-
-| JUnit API                      | 表明                       |
+| JUnit メソッド                 | 表明する内容               |
 |--------------------------------+----------------------------|
 | assertEquals(expected, actual) | ２つの引数が等価であること |
 | assertTrue(condition)          | 引数がtrueであること       |
 | assertNotNull(object)          | 引数がnullでないこと       |
 
-- 表明(assertion) :: 「こうなっているはずだ!」「こうなっていないとおかしい!」という宣言くらいの意
+現在は、上記メソッドではなくassertThatが使用されますが、今回はassertEqualsのみ使用します。
+
+** 表明(assertion)とは
+
+- 「こうなっているはずだ!」「こうなっていないとおかしい!」という宣言くらいの意
 - 表明が成立しなかった場合、例外が発生しテストが失敗します
 
-現在は、上記メソッドではなくassertThatが使用されますが、今回はassertEqualsのみ使用します。
+
 
 ** TDD Bootcampを例に（デモ）
 
-整数の閉区間 (closed range)
-
-http://devtesting.jp/tddbc/?TDDBC%E4%BB%99%E5%8F%B003%2F%E8%AA%B2%E9%A1%8C
-
+- [[http://devtesting.jp/tddbc/?TDDBC%25E4%25BB%2599%25E5%258F%25B003%252F%25E8%25AA%25B2%25E9%25A1%258C][TDDBC仙台03課題：整数の区間]]
 
 - 閉区間 :: 両端の点を含む区間。すなわち a ≦ x ≦ b で表されるような数直線上の範囲
 
