@@ -137,7 +137,7 @@ https://images-fe.ssl-images-amazon.com/images/I/51f-xfTWkkL._SX260_.jpg
 - そのクラスのテストを書く
 - 元の巨大メソッドから新規クラスを呼び出す
 
-#+BEGIN_SRC plantuml :file sp-class.png :cmdline -charset UTF-8
+#+BEGIN_SRC plantuml :file img/sp-class.png :cmdline -charset UTF-8
 scale 400 * 400
 class 既存クラス
 class 新規クラス
@@ -147,7 +147,8 @@ class テストクラス
 #+END_SRC
 
 #+RESULTS:
- [[file:sp-class.png]]
+[[file:img/sp-class.png]]
+
 
 
 *** スプラウトクラスの例

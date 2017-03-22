@@ -58,4 +58,4 @@ public class MyFirstTest {
 - 閉区間 :: 両端の点を含む区間。すなわち a ≦ x ≦ b で表されるような数直線上の範囲
 
 #+CAPTION: 3から8の閉区間
-[[./ClosedRange.jpg]]
+[[./img/ClosedRange.jpg]]

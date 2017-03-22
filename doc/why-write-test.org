@@ -93,7 +93,7 @@ http://blogs.itmedia.co.jp/hiranabe/2005/08/post_e66c.html
 - テスト駆動開発(Test Driven Development)
 
 *** テストに関連する技術・手法の依存関係
-#+BEGIN_SRC plantuml :file techs.png :cmdline -charset UTF-8
+#+BEGIN_SRC plantuml :file img/techs.png :cmdline -charset UTF-8
 scale 400 * 500
 object Test
 object Refactoring
@@ -118,7 +118,7 @@ DevOps -- Agile
 #+END_SRC
 
 #+RESULTS:
-[[file:techs.png]]
+[[file:img/techs.png]]
 
 
 ** 逆に、テストを書かないと…

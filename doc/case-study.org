@@ -15,8 +15,8 @@
 
 ** 基本的な考え方
 
-- 依存関係を断ち切る
-- テストがカバーする範囲を大きくする
+- ◎ 依存関係を断ち切る
+- △ テストがカバーする範囲を大きくする
   - 依存関係まとめてテストする
 
 ** ケース１: 乱数を使うので毎回戻り値が変わります
@@ -41,7 +41,7 @@
   - SELECTが発行される
 - 結果を比較する
 
-#+BEGIN_SRC plantuml :file select-test.png :cmdline -charset UTF-8
+#+BEGIN_SRC plantuml :file img/select-test.png :cmdline -charset UTF-8
 hide footbox
 scale 400 * 400
 
@@ -78,7 +78,7 @@ test --> test: 検索結果の検証する
   - INSERT/UPDATEが発行される
 - DBの値を検証する
 
-#+BEGIN_SRC plantuml :file update-test.png :cmdline -charset UTF-8
+#+BEGIN_SRC plantuml :file img/update-test.png :cmdline -charset UTF-8
 hide footbox
 scale 400 * 400
 
