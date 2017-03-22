@@ -1,0 +1,27 @@
+# -*- coding: utf-8-unix -*-
+
+# #+SETUPFILE: ./conf.org
+# #+TITLE: 参考文献
+
+* おまけ：参考文献
+
+
+** レガシーコード改善ガイド
+- テストコードが無いシステムにどう立ち向かうか
+https://images-na.ssl-images-amazon.com/images/I/51dVODTDz-L._SX258_BO1,204,203,200_.jpg
+
+** 新装版 リファクタリング―既存のコードを安全に改善する―
+- 初版より翻訳が良くなったそうです
+
+https://images-na.ssl-images-amazon.com/images/I/51RWpUlhNxL._SX385_BO1,204,203,200_.jpg
+
+** JUnit実践入門 ～ 体系的に学ぶユニットテストの技法 
+- Java使いならお勧め
+
+https://images-na.ssl-images-amazon.com/images/I/51TaOch1LJL._SX351_BO1,204,203,200_.jpg
+
+** 実践 JUnit ―達人プログラマーのユニットテスト技法
+- もうちょっと抽象的
+- 大阪府立図書館にあります
+
+https://images-na.ssl-images-amazon.com/images/I/51E0kY-W5gL._SX352_BO1,204,203,200_.jpg

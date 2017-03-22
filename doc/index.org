@@ -1,51 +1,28 @@
 # -*- mode: org; coding: utf-8-unix -*-
 
 #+SETUPFILE: ./conf.org
-#+TITLE: Don't just Do Test, Write Test.
+#+TITLE: テスト「書いて」みませんか？ - Don't just Do Test, Write Test.
 
 #+OPTIONS: toc:0
 #+OPTIONS: reveal_single_file:t
 #+REVEAL_EXTRA_CSS: ~/.emacs.d/lib/reveal.js/mystyle.css
 
 
-# なぜテストコードを書く必要があるのか
+# --- なぜテストコードを書く必要があるのか
 #+INCLUDE: "./why-write-test.org"
 
-# テストコードの書きかた入門編
+# --- テストコードの書きかた入門編
 #+INCLUDE: "./how-to-write-test.org"
 
-# こんなときどうテストするか
+# --- こんなときどうテストするか
 #+INCLUDE: "./case-study.org"
 
-# 新規プロジェクトにテストを導入する
+# --- 新規プロジェクトにテストを導入する
 #+INCLUDE: "./how-to-test-new-system.org"
 
-# 既存プロジェクトにテストを導入する
+# --- 既存プロジェクトにテストを導入する
 #+INCLUDE: "./how-to-test-existing-system.org"
 
-
-
-# ** ステークホルダーを説得する方法
-
-# - たいしてコストが掛からないことを主張する
-#   - コスパがよい箇所を抽出してテストとする
-#   - 最初から無理に全てをテスト対象としない
-
-# - 計画、見積もりをする
-# - 品質評価に使えることを主張する
-#   - カバレッジ
-
-# - 部門、メンバーの成長に必要であることを主張する
-#   - メンバーが成長できないとモチベーションが維持できない
-#   - このままでは新しい取り組みもできない
-
-
-# ** カバレッジ
-
-# - 取り方
-#   - 操作方法
-#   - 原理
-# - C0/C1
-
-
+# --- おまけ：参考文献
+#+INCLUDE: "./reference.org"
 

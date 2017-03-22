@@ -69,7 +69,8 @@ test --> test: 検索結果の検証する
 #+END_SRC
 
 #+RESULTS:
- [[file:select-test.png]]
+[[file:img/select-test.png]]
+
 
 *** 更新系のテスト
 
@@ -106,7 +107,8 @@ test --> db: 更新結果を検証する
 #+END_SRC
 
 #+RESULTS:
- [[file:update-test.png]]
+[[file:img/update-test.png]]
+
 
 *** DBアクセスを含むテストの問題点
 
