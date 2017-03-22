@@ -1,5 +1,6 @@
 # -*- coding: utf-8-unix -*-
-#+OPTIONS: toc:nil date:nil timestamp:nil
+#+OPTIONS: toc:1
+#+OPTIONS: date:nil timestamp:nil
 #+OPTIONS: ^:{}
 #+OPTIONS: \n:t
 #+OPTIONS: reveal_single_file:t
@@ -7,4 +8,3 @@
 #+REVEAL_THEME: beige
 #+REVEAL_TRANS: linear
 #+STARTUP: inlineimages
-#+AUTHOR: T.Kawasaki

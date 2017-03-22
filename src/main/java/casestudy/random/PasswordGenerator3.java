@@ -2,6 +2,7 @@ package casestudy.random;
 
 import java.util.Random;
 
+/** {@link Random}インスタンスを外部から渡せるようにする */
 public class PasswordGenerator3 {
 
     private final Random random;
@@ -21,24 +22,16 @@ public class PasswordGenerator3 {
      *            文字数
      * @return 生成されたパスワード
      */
-    String generate(int numberOfChar) {
+    public String generate(int numberOfChar) {
         StringBuilder password = new StringBuilder(numberOfChar);
         for (int i = 0; i < numberOfChar; i++) {
             int rand;
             do {
-                rand = generateInt();
+                rand = random.nextInt();
             } while (rand <= 0x20 || rand >= 0x7F);
             password.append((char) rand);
         }
         return password.toString();
     }
 
-    /**
-     * 数値を生成する。
-     *
-     * @return 数値
-     */
-    protected int generateInt() {
-        return random.nextInt();
-    }
 }

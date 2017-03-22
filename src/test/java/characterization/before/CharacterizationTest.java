@@ -9,5 +9,6 @@ public class CharacterizationTest {
     @Test
     public void 仕様化テスト() {
         Discount discount = new Discount();
+        // TODO カバレッジ見ながら適当に実行する.
     }
 }

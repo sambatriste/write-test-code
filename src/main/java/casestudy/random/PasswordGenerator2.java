@@ -2,6 +2,7 @@ package casestudy.random;
 
 import java.util.Random;
 
+/** {@link Random}使用箇所をオーバーライドできるようにする。 */
 public class PasswordGenerator2 {
 
     private final Random random = new Random();
@@ -12,12 +13,12 @@ public class PasswordGenerator2 {
      * @param numberOfChar 文字数
      * @return 生成されたパスワード
      */
-    String generate(int numberOfChar) {
+    public String generate(int numberOfChar) {
         StringBuilder password = new StringBuilder(numberOfChar);
         for (int i = 0; i < numberOfChar; i++) {
             int rand;
             do {
-                rand = generateInt();
+                rand = generateInt();  // メソッド抽出
             } while (rand <= 0x20 || rand >= 0x7F);
             password.append((char) rand);
         }

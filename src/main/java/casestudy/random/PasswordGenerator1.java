@@ -10,7 +10,7 @@ public class PasswordGenerator1 {
      * @param numberOfChar 文字数
      * @return 生成されたパスワード
      */
-    String generate(int numberOfChar) {
+    public String generate(int numberOfChar) {
         StringBuilder password = new StringBuilder(numberOfChar);
         for (int i = 0; i < numberOfChar; i++) {
             int rand;
