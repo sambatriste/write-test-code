@@ -12,8 +12,6 @@ import static org.junit.Assert.*;
  */
 public class FizzBuzzTest1 {
 
-
-
     @Test
     public void Writerを差し替えたテスト() throws IOException {
         StringWriter writer = new StringWriter();

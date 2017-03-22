@@ -5,11 +5,12 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 
-/**
- * Created by tie301686 on 2017/03/10.
- */
 public class FizzBuzz {
 
+    /**
+     * mainメソッド。
+     * @param args 第1引数: FizzBuzz実行上限値
+     */
     public static void main(String[] args) throws IOException {
         int num = args.length == 0 ? 15 : Integer.parseInt(args[0]);
         OutputStreamWriter out = new OutputStreamWriter(System.out);
@@ -17,13 +18,23 @@ public class FizzBuzz {
         fizzBuzz.print(num);
     }
 
-
+    /** 結果出力先 */
     private final BufferedWriter out;
 
+    /**
+     * コンストラクタ
+     * @param out 結果出力先
+     */
     public FizzBuzz(Writer out) {
         this.out = new BufferedWriter(out);
     }
 
+    /**
+     * 指定された値までFizzBuzz結果を表示する。
+     *
+     * @param until FizzBuzzを実行する上限値
+     * @throws IOException 予期しない入出力エラー
+     */
     public void print(int until) throws IOException {
         for (int i = 1; i <= until; i++) {
             String val = evaluate(i);
@@ -33,15 +44,21 @@ public class FizzBuzz {
         out.flush();
     }
 
-    String evaluate(int number) {
+    /**
+     * 与えられた数値をFizzBuzz評価する。
+     * @param number 評価対象の数値
+     * @return 評価結果
+     */
+    static String evaluate(int number) {
+        if (number % 15 == 0) {
+            return "FizzBuzz";
+        }
         if (number % 3 == 0) {
             return "Fizz";
-        } else if (number % 5 == 0) {
-            return "Buzz";
-        } else if (number % 15 == 0) {
-            return "FizzBuzz";
-        } else {
-            return String.valueOf(number);
         }
+        if (number % 5 == 0) {
+            return "Buzz";
+        }
+        return String.valueOf(number);
     }
 }
