@@ -7,17 +7,6 @@ import org.junit.Test;
 
 public class ClosedRangeTest {
 
-    static class ClosedRange {
-
-        /**
-         * コンストラクタ。
-         * @param lower 下端点
-         * @param upper 上端点
-         */
-        ClosedRange(int lower, int upper) {
-        }
-    }
-
     @Test
     public void 下端点と上端点を指定してnewできる() {
         ClosedRange c3to8 = new ClosedRange(3, 8);
@@ -26,14 +15,18 @@ public class ClosedRangeTest {
 
     @Test
     public void 下端点を取得できる() {
-        fail("まだ実装されていません。");
         // [3,8] の下端点は 3
+        ClosedRange c3to8 = new ClosedRange(3, 8);
+        int lowerEndPoint = c3to8.getLowerEndPoint();
+        assertEquals(3, lowerEndPoint);
     }
 
     @Test
     public void 上端点を取得できる() {
-        fail("まだ実装されていません。");
         // [3,8] の上端点は 8
+        ClosedRange c3to8 = new ClosedRange(3, 8);
+        int upperEndPoint = c3to8.getUpperEndPoint();
+        assertEquals(8, upperEndPoint);
     }
 
 
