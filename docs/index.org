@@ -122,7 +122,7 @@ http://blogs.itmedia.co.jp/hiranabe/2005/08/post_e66c.html
 
 *** テストに関連する技術・手法の依存関係
 #+BEGIN_SRC plantuml :file img/techs.png :cmdline -charset UTF-8
-scale 400 * 500
+scale 500 * 500
 object Test
 object Refactoring
 object "CI/CD" as cicd
@@ -811,4 +811,5 @@ class MemberValidator {
 - 大阪府立図書館にあります
 
 [[./img/books/実践JUnit.jpg]]
+
 

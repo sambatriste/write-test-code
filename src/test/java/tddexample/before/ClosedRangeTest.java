@@ -32,7 +32,7 @@ public class ClosedRangeTest {
 
     @Test
     public void 文字列表現を取得できる() {
-        fail("まだ実装されていません。");
+
         //  [3,8] の文字列表記は "[3,8]"
     }
 
