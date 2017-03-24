@@ -1732,9 +1732,9 @@ body {
 <li><a href="#/slide-orgheadline25">3. 逆に、テストを書かないと…</a></li>
 <li><a href="#/slide-orgheadline31">4. テストコードの書きかた超入門編</a></li>
 <li><a href="#/slide-orgheadline44">5. こんなときどうテストするか</a></li>
-<li><a href="#/slide-orgheadline54">6. 新規プロジェクトにテストを導入する</a></li>
-<li><a href="#/slide-orgheadline79">7. 既存プロジェクトにテストを導入する</a></li>
-<li><a href="#/slide-orgheadline85">8. おわりに</a></li>
+<li><a href="#/slide-orgheadline55">6. 新規プロジェクトにテストを導入する</a></li>
+<li><a href="#/slide-orgheadline80">7. 既存プロジェクトにテストを導入する</a></li>
+<li><a href="#/slide-orgheadline86">8. おわりに</a></li>
 </ul>
 </div>
 </div>
@@ -6360,30 +6360,34 @@ SSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSdGj
 </section>
 </section>
 <section>
-<section id="slide-orgheadline54">
-<h2 id="orgheadline54"><span class="section-number-2">6</span> 新規プロジェクトにテストを導入する</h2>
+<section id="slide-orgheadline55">
+<h2 id="orgheadline55"><span class="section-number-2">6</span> 新規プロジェクトにテストを導入する</h2>
 <div class="outline-text-2" id="text-6">
 </div></section>
 <section id="slide-orgheadline45">
-<h3 id="orgheadline45"><span class="section-number-3">6.1</span> 絶対やっておくべきこと</h3>
+<h3 id="orgheadline45"><span class="section-number-3">6.1</span> やっておくべきこと</h3>
 <ul>
-<li>最初から計画に織り込んでおくこと<br  />
-<ul>
-<li>どうテストを書く/するのか検討する計画に<br  /></li>
-<li>あらかじめコストを積んでおく<br  /></li>
-
-</ul></li>
-<li>テストコードを正式な成果物として定義すること<br  /></li>
+<li>最初から計画に織り込んでおくこと<br  /></li>
 <li>テストコードのサンプルを作成すること<br  /></li>
+<li>テストコードを正式な成果物として定義すること<br  /></li>
 <li>テストを自動実行できるようにすること(CI)<br  /></li>
 
 </ul>
 
 </section>
-<section id="slide-orgheadline50">
-<h3 id="orgheadline50"><span class="section-number-3">6.2</span> テスト戦略を立てる</h3>
+<section id="slide-orgheadline51">
+<h3 id="orgheadline51"><span class="section-number-3">6.2</span> 計画</h3>
+<ul>
+<li>あらかじめコスト、期間を積んでおく<br  /></li>
+<li>どうテストを書く/するのか検討する計画にしておく<br  /></li>
+
+</ul>
+
+</section>
+<section id="slide-orgheadline46">
+<h4 id="orgheadline46"><span class="section-number-4">6.2.1</span> テスト戦略を立てる</h4>
 <p>
-モジュールをどうテストするか、あらかじめ検討をしておく。<br  />
+各ステレオタイプをどうテストするか検討をしておく。<br  />
 </p>
 
 <ul>
@@ -6398,8 +6402,8 @@ SSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSdGj
 </p>
 
 </section>
-<section id="slide-orgheadline46">
-<h4 id="orgheadline46"><span class="section-number-4">6.2.1</span> ステレオタイプ毎のテスト例</h4>
+<section id="slide-orgheadline47">
+<h4 id="orgheadline47"><span class="section-number-4">6.2.2</span> ステレオタイプ毎のテスト例</h4>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -6472,8 +6476,8 @@ SSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSdGj
 </ul>
 
 </section>
-<section id="slide-orgheadline47">
-<h4 id="orgheadline47"><span class="section-number-4">6.2.2</span> 全てのテストを書こうとしない</h4>
+<section id="slide-orgheadline48">
+<h4 id="orgheadline48"><span class="section-number-4">6.2.3</span> 全てのテストを書こうとしない</h4>
 <ul>
 <li>最初はテストを書く範囲は狭くてもよい。<br  />
 <ul>
@@ -6489,8 +6493,8 @@ SSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSdGj
 </ul>
 
 </section>
-<section id="slide-orgheadline48">
-<h4 id="orgheadline48"><span class="section-number-4">6.2.3</span> ハマりポイント(E2Eテスト)</h4>
+<section id="slide-orgheadline49">
+<h4 id="orgheadline49"><span class="section-number-4">6.2.4</span> ハマりポイント(E2Eテスト)</h4>
 <p>
 いきなりEnd to Endのテストは難易度高い<br  />
 </p>
@@ -6501,8 +6505,8 @@ SSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSdGj
 </ul>
 
 </section>
-<section id="slide-orgheadline49">
-<h4 id="orgheadline49"><span class="section-number-4">6.2.4</span> ハマりポイント(カバレッジ)</h4>
+<section id="slide-orgheadline50">
+<h4 id="orgheadline50"><span class="section-number-4">6.2.5</span> ハマりポイント(カバレッジ)</h4>
 <p>
 カバレッジを終了条件にするのは諸刃の剣<br  />
 </p>
@@ -6512,37 +6516,37 @@ SSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSdGj
 <li>カバレッジを100%にするため非効率な努力をすることも<br  />
 <ul>
 <li>プライベートコンストラクタ<br  /></li>
-
-</ul></li>
-
-</ul>
-<p>
-　- if (logger.isDebugEnabled()) {<br  />
-</p>
-<ul>
+<li>if (logger.isDebugEnabled()) {<br  /></li>
 <li>Viewからしか呼ばれないアクセサメソッド<br  /></li>
 
-</ul>
-
-</section>
-<section id="slide-orgheadline51">
-<h3 id="orgheadline51"><span class="section-number-3">6.3</span> サンプルを作成する（重要！）</h3>
-<ul>
-<li>サンプルが整備できていれば、ほとんどの開発者はテストを書ける。<br  />
-<ul>
-<li>パイロット開発時にテストも整備する<br  /></li>
-
 </ul></li>
-<li>ここで手を抜いて開発者/委託先に丸投げすると、コードにバラツキが出る。<br  /></li>
 
 </ul>
 
 </section>
 <section id="slide-orgheadline52">
-<h3 id="orgheadline52"><span class="section-number-3">6.4</span> レビューする</h3>
+<h3 id="orgheadline52"><span class="section-number-3">6.3</span> サンプルを作成する（重要！）</h3>
+<ul>
+<li>サンプルが整備できていれば、ほとんどの開発者はテストを書ける。<br  />
+<ul>
+<li>パイロット開発時にテストコードも整備する。<br  /></li>
+
+</ul></li>
+<li>ここで手を抜いて開発者/委託先に丸投げすると、コードにバラツキが出る。<br  />
+<ul>
+<li>メンテされなくなる。<br  /></li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-orgheadline53">
+<h3 id="orgheadline53"><span class="section-number-3">6.4</span> 成果物定義</h3>
 <p>
 テストコードは成果物です。 <b>レビュー</b> しましょう。<br  />
 </p>
+
 <ul>
 <li>可読性、保守性<br  /></li>
 <li>テスト実行順序に依存していないか<br  /></li>
@@ -6551,20 +6555,21 @@ SSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSdGj
 </ul>
 
 </section>
-<section id="slide-orgheadline53">
-<h3 id="orgheadline53"><span class="section-number-3">6.5</span> CI戦略を立てる</h3>
+<section id="slide-orgheadline54">
+<h3 id="orgheadline54"><span class="section-number-3">6.5</span> CI戦略を立てる</h3>
 <p>
 頻繁にテストを全実行しなければ、簡単にテストは壊れます。<br  />
 </p>
 
 <ul>
-<li>テスト失敗を検知した場合、速やかに（他のタスクを止めて）修正します。<br  />
+<li>テスト失敗を検知した場合、速やかに（他のタスクを止めて）修正する。<br  />
 <ul>
 <li>対応が早いほど修正コストは低くなります。<br  /></li>
 
 </ul></li>
-<li>朝会で毎日テスト結果確認しましょう。<br  />
+<li>朝会で毎日テスト結果確認<br  />
 <ul>
+<li>「お見合い」を防ぐ<br  /></li>
 <li>テスト失敗があれば、その場で誰が対応するかを決めましょう。<br  /></li>
 
 </ul></li>
@@ -6574,12 +6579,12 @@ SSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSdGj
 </section>
 </section>
 <section>
-<section id="slide-orgheadline79">
-<h2 id="orgheadline79"><span class="section-number-2">7</span> 既存プロジェクトにテストを導入する</h2>
+<section id="slide-orgheadline80">
+<h2 id="orgheadline80"><span class="section-number-2">7</span> 既存プロジェクトにテストを導入する</h2>
 <div class="outline-text-2" id="text-7">
 </div></section>
-<section id="slide-orgheadline55">
-<h3 id="orgheadline55"><span class="section-number-3">7.1</span> 既存プロジェクト特有の難しさ</h3>
+<section id="slide-orgheadline56">
+<h3 id="orgheadline56"><span class="section-number-3">7.1</span> 既存プロジェクト特有の難しさ</h3>
 <ul>
 <li>テストを後付けで整備する <span class="underline">工数</span> が捻出できない<br  /></li>
 <li><span class="underline">仕様</span> がわからない<br  /></li>
@@ -6597,8 +6602,8 @@ SSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSdGj
 </p>
 
 </section>
-<section id="slide-orgheadline67">
-<h3 id="orgheadline67"><span class="section-number-3">7.2</span> テストコードを整備する余力がありません</h3>
+<section id="slide-orgheadline68">
+<h3 id="orgheadline68"><span class="section-number-3">7.2</span> テストコードを整備する余力がありません</h3>
 <ul>
 <li>私のシステムには <span class="underline">テストコードがありません</span> 。<br  /></li>
 <li>テストコードを整備する <span class="underline">工数を捻出できません</span> 。<br  /></li>
@@ -6606,8 +6611,8 @@ SSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSSKXJEmSyCVJksglSZIkckmSJIlckiSJXJIkSdGj
 </ul>
 
 </section>
-<section id="slide-orgheadline56">
-<h4 id="orgheadline56"><span class="section-number-4">7.2.1</span> 突破口</h4>
+<section id="slide-orgheadline57">
+<h4 id="orgheadline57"><span class="section-number-4">7.2.1</span> 突破口</h4>
 <ul>
 <li>システム全体にテストコードを整備するのは大変<br  /></li>
 <li><span class="underline">追加/変更する箇所だけ</span> テストを書く<br  /></li>
@@ -7138,8 +7143,8 @@ IVkeneCiP+EN03AH3G/9CNapYetFFZM+IxGlafq/zDIxRuGAB3oopXMR24d6KKKVx3P/2Q==" /><br 
 
 
 </section>
-<section id="slide-orgheadline57">
-<h4 id="orgheadline57"><span class="section-number-4">7.2.2</span> スプラウトメソッド</h4>
+<section id="slide-orgheadline58">
+<h4 id="orgheadline58"><span class="section-number-4">7.2.2</span> スプラウトメソッド</h4>
 <p>
 既存の巨大メソッドに機能追加する必要がある<br  />
 </p>
@@ -7167,8 +7172,8 @@ IVkeneCiP+EN03AH3G/9CNapYetFFZM+IxGlafq/zDIxRuGAB3oopXMR24d6KKKVx3P/2Q==" /><br 
 </div>
 
 </section>
-<section id="slide-orgheadline58">
-<h4 id="orgheadline58"><span class="section-number-4">7.2.3</span> スプラウト(sprout)のイメージ</h4>
+<section id="slide-orgheadline59">
+<h4 id="orgheadline59"><span class="section-number-4">7.2.3</span> スプラウト(sprout)のイメージ</h4>
 
 <div class="figure">
 <p><img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4RhsRXhpZgAATU0AKgAAAAgAEAAfAAUAAAABAAAI2gEPAAIA
@@ -8371,8 +8376,8 @@ Sd3+f16U178RqowqnGdhb5sev/1+lVpzsmXbxz2qG+O9fm5wGxnt+8Yfy4rE2P/Z" /><br  />
 
 
 </section>
-<section id="slide-orgheadline59">
-<h4 id="orgheadline59"><span class="section-number-4">7.2.4</span> 例：修正前コード</h4>
+<section id="slide-orgheadline60">
+<h4 id="orgheadline60"><span class="section-number-4">7.2.4</span> 例：修正前コード</h4>
 <div class="org-src-container">
 
 <pre  class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">register</span>(<span style="color: #228b22;">Member</span> <span style="color: #a0522d;">member</span>) {
@@ -8388,8 +8393,8 @@ Sd3+f16U178RqowqnGdhb5sev/1+lVpzsmXbxz2qG+O9fm5wGxnt+8Yfy4rE2P/Z" /><br  />
 </ul>
 
 </section>
-<section id="slide-orgheadline60">
-<h4 id="orgheadline60"><span class="section-number-4">7.2.5</span> そのまま処理追加した例</h4>
+<section id="slide-orgheadline61">
+<h4 id="orgheadline61"><span class="section-number-4">7.2.5</span> そのまま処理追加した例</h4>
 <div class="org-src-container">
 
 <pre  class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">register</span>(<span style="color: #228b22;">Member</span> <span style="color: #a0522d;">member</span>) {
@@ -8409,8 +8414,8 @@ Sd3+f16U178RqowqnGdhb5sev/1+lVpzsmXbxz2qG+O9fm5wGxnt+8Yfy4rE2P/Z" /><br  />
 </div>
 
 </section>
-<section id="slide-orgheadline61">
-<h4 id="orgheadline61"><span class="section-number-4">7.2.6</span> 問題点</h4>
+<section id="slide-orgheadline62">
+<h4 id="orgheadline62"><span class="section-number-4">7.2.6</span> 問題点</h4>
 <ul>
 <li>正しく変更できたかどうか確認できない<br  />
 <ul>
@@ -8422,8 +8427,8 @@ Sd3+f16U178RqowqnGdhb5sev/1+lVpzsmXbxz2qG+O9fm5wGxnt+8Yfy4rE2P/Z" /><br  />
 </ul>
 
 </section>
-<section id="slide-orgheadline62">
-<h4 id="orgheadline62"><span class="section-number-4">7.2.7</span> 解決案</h4>
+<section id="slide-orgheadline63">
+<h4 id="orgheadline63"><span class="section-number-4">7.2.7</span> 解決案</h4>
 <div class="org-src-container">
 
 <pre  class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">register</span>(<span style="color: #228b22;">Member</span> <span style="color: #a0522d;">member</span>) {
@@ -8449,8 +8454,8 @@ Sd3+f16U178RqowqnGdhb5sev/1+lVpzsmXbxz2qG+O9fm5wGxnt+8Yfy4rE2P/Z" /><br  />
 </div>
 
 </section>
-<section id="slide-orgheadline63">
-<h4 id="orgheadline63"><span class="section-number-4">7.2.8</span> そのテストコード</h4>
+<section id="slide-orgheadline64">
+<h4 id="orgheadline64"><span class="section-number-4">7.2.8</span> そのテストコード</h4>
 <div class="org-src-container">
 
 <pre  class="src src-java"><span style="color: #008b8b;">@Test</span>
@@ -8475,8 +8480,8 @@ Sd3+f16U178RqowqnGdhb5sev/1+lVpzsmXbxz2qG+O9fm5wGxnt+8Yfy4rE2P/Z" /><br  />
 
 
 </section>
-<section id="slide-orgheadline64">
-<h4 id="orgheadline64"><span class="section-number-4">7.2.9</span> スプラウトクラス</h4>
+<section id="slide-orgheadline65">
+<h4 id="orgheadline65"><span class="section-number-4">7.2.9</span> スプラウトクラス</h4>
 <p>
 スプラウトメソッドのクラス版<br  />
 </p>
@@ -8738,8 +8743,8 @@ B+0E/yVaFX5QAAAAAElFTkSuQmCC" /><br  />
 
 
 </section>
-<section id="slide-orgheadline65">
-<h4 id="orgheadline65"><span class="section-number-4">7.2.10</span> スプラウトクラスの例</h4>
+<section id="slide-orgheadline66">
+<h4 id="orgheadline66"><span class="section-number-4">7.2.10</span> スプラウトクラスの例</h4>
 <div class="org-src-container">
 
 <pre  class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">register</span>(<span style="color: #228b22;">Member</span> <span style="color: #a0522d;">member</span>) {
@@ -8769,8 +8774,8 @@ B+0E/yVaFX5QAAAAAElFTkSuQmCC" /><br  />
 </div>
 
 </section>
-<section id="slide-orgheadline66">
-<h4 id="orgheadline66"><span class="section-number-4">7.2.11</span> スプラウトメソッドとの使い分け</h4>
+<section id="slide-orgheadline67">
+<h4 id="orgheadline67"><span class="section-number-4">7.2.11</span> スプラウトメソッドとの使い分け</h4>
 <p>
 以下のケースでは、スプラウトクラスを使用<br  />
 </p>
@@ -8792,8 +8797,8 @@ B+0E/yVaFX5QAAAAAElFTkSuQmCC" /><br  />
 </ul>
 
 </section>
-<section id="slide-orgheadline71">
-<h3 id="orgheadline71"><span class="section-number-3">7.3</span> システムの仕様がわかりません</h3>
+<section id="slide-orgheadline72">
+<h3 id="orgheadline72"><span class="section-number-3">7.3</span> システムの仕様がわかりません</h3>
 <ul>
 <li>テストを書くには <span class="underline">仕様を理解</span> する必要があります<br  /></li>
 <li>設計書はメンテされておらず、何が正解なのか誰もわかりません<br  /></li>
@@ -8802,8 +8807,8 @@ B+0E/yVaFX5QAAAAAElFTkSuQmCC" /><br  />
 </ul>
 
 </section>
-<section id="slide-orgheadline68">
-<h4 id="orgheadline68"><span class="section-number-4">7.3.1</span> 仕様化テスト</h4>
+<section id="slide-orgheadline69">
+<h4 id="orgheadline69"><span class="section-number-4">7.3.1</span> 仕様化テスト</h4>
 <p>
 現在のシステムの動作を正として、システムの振る舞いを写し取るテスト。<br  />
 (Characterization Test)<br  />
@@ -8815,8 +8820,8 @@ B+0E/yVaFX5QAAAAAElFTkSuQmCC" /><br  />
 </dl>
 
 </section>
-<section id="slide-orgheadline69">
-<h4 id="orgheadline69"><span class="section-number-4">7.3.2</span> 仕様化テストの書き方</h4>
+<section id="slide-orgheadline70">
+<h4 id="orgheadline70"><span class="section-number-4">7.3.2</span> 仕様化テストの書き方</h4>
 <ul>
 <li>とりあえず適当な入力で既存機能を呼び出してみる<br  /></li>
 <li>適当な値で結果比較する<br  /></li>
@@ -8830,8 +8835,8 @@ B+0E/yVaFX5QAAAAAElFTkSuQmCC" /><br  />
 </p>
 
 </section>
-<section id="slide-orgheadline70">
-<h4 id="orgheadline70"><span class="section-number-4">7.3.3</span> デモ(例：割引率を計算する。)</h4>
+<section id="slide-orgheadline71">
+<h4 id="orgheadline71"><span class="section-number-4">7.3.3</span> デモ(例：割引率を計算する。)</h4>
 <ul>
 <li>1千円以上1万円未満買い上げの方は1割引<br  /></li>
 <li>1万円以上お買い上げの方は2割引<br  /></li>
@@ -8877,8 +8882,8 @@ B+0E/yVaFX5QAAAAAElFTkSuQmCC" /><br  />
 </p>
 
 </section>
-<section id="slide-orgheadline78">
-<h3 id="orgheadline78"><span class="section-number-3">7.4</span> やる気が出ません</h3>
+<section id="slide-orgheadline79">
+<h3 id="orgheadline79"><span class="section-number-3">7.4</span> やる気が出ません</h3>
 <ul>
 <li>毎日スパゲッティコードを相手しています。<br  /></li>
 <li>とても改善ができると思えません。<br  /></li>
@@ -8893,8 +8898,8 @@ B+0E/yVaFX5QAAAAAElFTkSuQmCC" /><br  />
 
 
 </section>
-<section id="slide-orgheadline72">
-<h4 id="orgheadline72"><span class="section-number-4">7.4.1</span> 少々コードが整備されたところで現実は変わらないのでは？</h4>
+<section id="slide-orgheadline73">
+<h4 id="orgheadline73"><span class="section-number-4">7.4.1</span> 少々コードが整備されたところで現実は変わらないのでは？</h4>
 <blockquote nil>
 <p>
 「どうせ90パーセントの時間をヘドロのようなものを相手に過ごすのに、この小さい部分だけきれいにしたところで何だというのだ。もちろん、この小さな部分は改善できる。しかし、それが今日の午後、あるいは明日の私にとって何の役に立つだろうか？」。<br  />
@@ -8907,8 +8912,8 @@ B+0E/yVaFX5QAAAAAElFTkSuQmCC" /><br  />
 
 
 </section>
-<section id="slide-orgheadline73">
-<h4 id="orgheadline73"><span class="section-number-4">7.4.2</span> 改善を続けると…</h4>
+<section id="slide-orgheadline74">
+<h4 id="orgheadline74"><span class="section-number-4">7.4.2</span> 改善を続けると…</h4>
 <blockquote nil>
 <p>
 しかし、一貫してそのような小さな改善を続ければ、数ヶ月の間にシステムは見違えるような状態になります。ある日の朝、ヘドロを相手に汚い仕事をするつもりで会社に来ると、次のことに気づきます。<br  />
@@ -8921,8 +8926,8 @@ B+0E/yVaFX5QAAAAAElFTkSuQmCC" /><br  />
 
 
 </section>
-<section id="slide-orgheadline74">
-<h4 id="orgheadline74"><span class="section-number-4">7.4.3</span> 自分が変わる</h4>
+<section id="slide-orgheadline75">
+<h4 id="orgheadline75"><span class="section-number-4">7.4.3</span> 自分が変わる</h4>
 <blockquote nil>
 <p>
 「あれ？このコードはいい感じになっているぞ。誰かがこのコードを最近リファクタリングしたようだ」。その時点、すなわち優れたコードと悪いコードの違いを直感的に理解できた時こそが、皆さんが変わる時です。<br  />
@@ -8935,8 +8940,8 @@ B+0E/yVaFX5QAAAAAElFTkSuQmCC" /><br  />
 
 
 </section>
-<section id="slide-orgheadline75">
-<h4 id="orgheadline75"><span class="section-number-4">7.4.4</span> 隣の新規開発の芝は、実はそれほど青くない</h4>
+<section id="slide-orgheadline76">
+<h4 id="orgheadline76"><span class="section-number-4">7.4.4</span> 隣の新規開発の芝は、実はそれほど青くない</h4>
 <blockquote nil>
 <p>
 レガシーシステムを担当する人たちは、しばしば新規開発に携わることを望みます。<br  />
@@ -8950,8 +8955,8 @@ B+0E/yVaFX5QAAAAAElFTkSuQmCC" /><br  />
 </blockquote>
 
 </section>
-<section id="slide-orgheadline76">
-<h4 id="orgheadline76"><span class="section-number-4">7.4.5</span> 取り組む姿勢が重要</h4>
+<section id="slide-orgheadline77">
+<h4 id="orgheadline77"><span class="section-number-4">7.4.5</span> 取り組む姿勢が重要</h4>
 <blockquote nil>
 <p>
 私は、数百万行ものレガシーコードを扱っているいくつかのチームを訪れたことがあります。これらのチームは、毎日が挑戦であり、物事をより良くする機会であるととらえ、仕事を楽しんでいました。<br  />
@@ -8967,8 +8972,8 @@ B+0E/yVaFX5QAAAAAElFTkSuQmCC" /><br  />
 </p>
 
 </section>
-<section id="slide-orgheadline77">
-<h4 id="orgheadline77"><span class="section-number-4">7.4.6</span> 結論</h4>
+<section id="slide-orgheadline78">
+<h4 id="orgheadline78"><span class="section-number-4">7.4.6</span> 結論</h4>
 <ul>
 <li>コードを変えれば自分が変わる（成長する）<br  />
 <ul>
@@ -8992,8 +8997,8 @@ B+0E/yVaFX5QAAAAAElFTkSuQmCC" /><br  />
 </section>
 </section>
 <section>
-<section id="slide-orgheadline85">
-<h2 id="orgheadline85"><span class="section-number-2">8</span> おわりに</h2>
+<section id="slide-orgheadline86">
+<h2 id="orgheadline86"><span class="section-number-2">8</span> おわりに</h2>
 <p>
 導入に向けて&#x2026;<br  />
 </p>
@@ -9009,12 +9014,12 @@ B+0E/yVaFX5QAAAAAElFTkSuQmCC" /><br  />
 </p>
 
 </section>
-<section id="slide-orgheadline84">
-<h3 id="orgheadline84"><span class="section-number-3">8.1</span> おまけ：参考文献</h3>
+<section id="slide-orgheadline85">
+<h3 id="orgheadline85"><span class="section-number-3">8.1</span> おまけ：参考文献</h3>
 <div class="outline-text-3" id="text-8-1">
 </div></section>
-<section id="slide-orgheadline80">
-<h4 id="orgheadline80"><span class="section-number-4">8.1.1</span> レガシーコード改善ガイド</h4>
+<section id="slide-orgheadline81">
+<h4 id="orgheadline81"><span class="section-number-4">8.1.1</span> レガシーコード改善ガイド</h4>
 <ul>
 <li>テストコードが無いシステムにどう立ち向かうか<br  /></li>
 
@@ -9539,8 +9544,8 @@ IVkeneCiP+EN03AH3G/9CNapYetFFZM+IxGlafq/zDIxRuGAB3oopXMR24d6KKKVx3P/2Q==" /><br 
 
 
 </section>
-<section id="slide-orgheadline81">
-<h4 id="orgheadline81"><span class="section-number-4">8.1.2</span> 新装版 リファクタリング―既存のコードを安全に改善する―</h4>
+<section id="slide-orgheadline82">
+<h4 id="orgheadline82"><span class="section-number-4">8.1.2</span> 新装版 リファクタリング―既存のコードを安全に改善する―</h4>
 <ul>
 <li>初版より翻訳が良くなったそうです<br  /></li>
 
@@ -9735,8 +9740,8 @@ ppAf/9k=" /><br  />
 
 
 </section>
-<section id="slide-orgheadline82">
-<h4 id="orgheadline82"><span class="section-number-4">8.1.3</span> JUnit実践入門 ～ 体系的に学ぶユニットテストの技法</h4>
+<section id="slide-orgheadline83">
+<h4 id="orgheadline83"><span class="section-number-4">8.1.3</span> JUnit実践入門 ～ 体系的に学ぶユニットテストの技法</h4>
 <ul>
 <li>Java使いでJUnit初心者ならお勧め<br  /></li>
 
@@ -10484,8 +10489,8 @@ fAX9mrxFpHjHwvNouqXXiqe9jhbULS48yFrOzQPuhldR80bjBOfl6YIJK5Zy946I7H//2Q==" /><br 
 
 
 </section>
-<section id="slide-orgheadline83">
-<h4 id="orgheadline83"><span class="section-number-4">8.1.4</span> 実践 JUnit ―達人プログラマーのユニットテスト技法</h4>
+<section id="slide-orgheadline84">
+<h4 id="orgheadline84"><span class="section-number-4">8.1.4</span> 実践 JUnit ―達人プログラマーのユニットテスト技法</h4>
 <ul>
 <li>もうちょっと抽象的<br  /></li>
 <li>大阪府立図書館にあります<br  /></li>
