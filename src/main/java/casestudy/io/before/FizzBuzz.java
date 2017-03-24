@@ -7,8 +7,7 @@ public class FizzBuzz {
      * @param args 第1引数: FizzBuzz実行上限値
      */
     public static void main(String... args) {
-        int num = args.length == 0 ? 15 : Integer.parseInt(args[0]);
-        for (int i = 1; i <= num; i++) {
+        for (int i = 1; i <= 16; i++) {
             String result;
             if (i % 15 == 0) {
                 result = "FizzBuzz";

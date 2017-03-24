@@ -12,10 +12,9 @@ public class FizzBuzz {
      * @param args 第1引数: FizzBuzz実行上限値
      */
     public static void main(String[] args) throws IOException {
-        int num = args.length == 0 ? 15 : Integer.parseInt(args[0]);
         OutputStreamWriter out = new OutputStreamWriter(System.out);
         FizzBuzz fizzBuzz = new FizzBuzz(out);
-        fizzBuzz.print(num);
+        fizzBuzz.print(16);
     }
 
     /** 結果出力先 */
@@ -39,7 +38,7 @@ public class FizzBuzz {
         for (int i = 1; i <= until; i++) {
             String val = evaluate(i);
             out.write(val);
-            out.newLine();
+            out.write('\n');
         }
         out.flush();
     }

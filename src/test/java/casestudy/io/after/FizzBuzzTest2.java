@@ -11,22 +11,30 @@ public class FizzBuzzTest2 {
 
     @Test
     public void 入力が3のときFizzが返却されること() {
-        assertEquals("Fizz", FizzBuzz.evaluate(3));
+        String expected = "Fizz";
+        String actual = FizzBuzz.evaluate(3);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void 入力が4のとき4が返却されること() {
-        assertEquals("4", FizzBuzz.evaluate(4));
+        String expected = "4";
+        String actual = FizzBuzz.evaluate(4);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void 入力が5のときBuzzが返却されること() {
-        assertEquals("Buzz", FizzBuzz.evaluate(5));
+        String expected = "Buzz";
+        String actual = FizzBuzz.evaluate(5);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void 入力が15のときFizzBuzzが返却されること() {
-        assertEquals("FizzBuzz", FizzBuzz.evaluate(15));
+        String expected = "FizzBuzz";
+        String actual = FizzBuzz.evaluate(15);
+        assertEquals(expected, actual);
     }
 
 }
