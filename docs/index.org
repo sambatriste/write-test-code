@@ -66,7 +66,7 @@ xUnitを使ってユニットテストを書くと、テスト対象の粒度が
 
 - 仕組みを作れば、あとはデータを入れ替えるだけ
 - 10画面遷移するカード新規入会画面
-  - 8画面目でバグを発見し、スクショを取り直す
+  - 8画面目でバグを発見し、テストを最初からやりなおし
 
 *** 結果確認がかんたん
 
@@ -177,7 +177,8 @@ void 計算クリック() {
 
 ** 構造を修正できない
 - テストコード無しでリファクタリングは非現実的
-- リファクタリング :: 振る舞いを変えずに内部構造を変える
+
+  - リファクタリング - 振る舞いを変えずに内部構造を変える
 
 [[./img/books/refactoring.jpg]]
 
@@ -259,15 +260,42 @@ public class MyFirstTest {
 - △ テストがカバーする範囲を大きくする
   - 依存関係まとめてテストする
 
-** ケース: このメソッドは戻り値がなくファイルに結果を出力します
+** ケース1: このメソッドは戻り値がなくファイルに結果を出力します
 
 - 出力先への依存を断ち切る
 - ファイルへ出力する前の値を検証する
 
 /コードで説明/
 
+*** 解説
 
-** ケース: 乱数を使うので毎回戻り値が変わります
+修正前
+#+BEGIN_SRC plantuml :file img/fizzbuzz-before.png :cmdline -charset UTF-8
+left to right direction
+Test ..> FizzBuzz : テストする
+FizzBuzz ..> System : 出力する
+class System {
+  PrintStream : out
+}
+#+END_SRC
+
+#+RESULTS:
+[[file:img/fizzbuzz-before.png]]
+
+修正後
+#+BEGIN_SRC plantuml :file img/fizzbuzz-after.png :cmdline -charset UTF-8
+left to right direction
+Test ..> FizzBuzz : テストする
+FizzBuzz ..> Writer : 出力する
+StringWriter --|> Writer
+Test ..> StringWriter : 生成する
+#+END_SRC
+
+#+RESULTS:
+[[file:img/fizzbuzz-after.png]]
+
+
+** ケース2: 乱数を使うので毎回戻り値が変わります
 
 - 乱数(Random)への依存を断ち切る
 
@@ -345,7 +373,7 @@ activate db
 db --> sut
 deactivate db
 
-sut --> test: 検索結果
+sut --> test
 deactivate sut
 
 test --> db: 更新結果を検証する
@@ -394,6 +422,8 @@ test --> db: 更新結果を検証する
   - ○ SQLやストアドが重要なシステム
   - ✕ DBを永続化のために使用しているシステム
 
+- 参照系だけテストを書く
+  - 複雑なクエリはSELECTに集中している
 - DBアクセスする遅いテストとそうでない速いテストを分ける
   - 速いテスト→遅いテストの順に実行する
 
